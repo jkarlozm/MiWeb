@@ -1,0 +1,8 @@
+#Robots Servido desde Karloz Web
+User-agent: *
+Disallow:	/css/
+Disallow:	/js/
+Disallow:	/fonts/
+Disallow:	/bd/
+Disallow:	/librerias/
+Disallow:	/manager/
