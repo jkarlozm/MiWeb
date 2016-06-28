@@ -219,28 +219,31 @@ section.imagen, div.imagen{
 	background: url(../img/fondos/fondotrabajos.jpg)no-repeat center center fixed;
 	background-size: cover;
 }
-section.app-seccion article.trabajo{	
+section.app-seccion div.trabajo{	
 	width: 30%;
 	display: inline-block;
 	vertical-align: middle;
 	margin: 10px 1.5%;
+	border-bottom: 4px solid #12d6c3;
 }
-section.app-seccion article h2.text-center{
-	text-transform: uppercase;
-	letter-spacing: 1px;
+
+section.app-seccion div.trabajo > div.panel-heading{	
+	height: 180px;
 }
-section.app-seccion article p.text-justify{
-	padding: 5px;
-	font-style: italic;
+section.app-seccion div.trabajo div.panel-body figure{
+	border: 3px solid white;
+	border-radius: 50%;
+	box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+	margin-top: -55px;
+	margin-bottom: 10px;
+	max-width: 70px;
+	overflow: hidden;
 }
-section.app-seccion article{	
-	padding: 10px;
-	margin-bottom: 15px;	
+section.app-seccion div.trabajo div.panel-body figure img{
+	width: 70px;
+	height: 70px;	
 }
-section.app-seccion article:hover{	
-	border-radius: 15px;
-	background-color: #AAF2D5;	
-}
+
 /*****************************************
 ********** infotrabajos.php **********
 *****************************************/
@@ -430,7 +433,7 @@ textarea#mensajecorreo{
 	section.app-aboutme div.animacion p{
 		font-size: 30px;		
 	}
-	section.app-seccion article.trabajo{	
+	section.app-seccion div.trabajo{	
 		width: 80%;
 		display: inline-block;		
 		margin: 10px 9%;

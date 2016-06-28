@@ -16,12 +16,13 @@
 				<h2 class="text-center text-capitalize">trabajos</h2>
 				<?php
                 	while($fila6Trabajos = mysqli_fetch_assoc($rSQL6trabajos)) { ?>
-	                    <article class="trabajo">
-	                        <figure>
-	                            <img src="img/trabajos/<?php echo $fila6Trabajos['imagen']; ?> " alt="<?php echo $fila6Trabajos['imagen']; ?>" class="img-responsive img-rounded">
-	                            <h2 class="text-center"><?php echo $fila6Trabajos['titulo']; ?></h2>
-	                        </figure>
-	                    </article>
+	                    <div class="panel panel-default trabajo">
+	                    	<div class="panel-heading" style="background: url('img/trabajos/<?php echo $fila6Trabajos['imagen']; ?>'); background-size: cover;">
+	                    	</div>
+	                    	<div class="panel-body">
+	                            <h2 class="text-center text-capitalize"><?php echo $fila6Trabajos['titulo']; ?></h2>
+	                    	</div>	                        
+	                    </div>
                 	<?php }
 			}
 			break;
@@ -60,29 +61,39 @@
 			
 			while ($filaRegistrosTrabajos = mysqli_fetch_assoc($rSQLregistroTrabajos)) {
 				$totalComentarios = mysqli_num_rows(mysqli_query($conexion, "SELECT id_trabajos FROM comentarios WHERE id_trabajos = ".$filaRegistrosTrabajos["id_trabajos"]));
-				$trabajo = $trabajo.'<article class="trabajo">
-					<h2 class="text-center">'.$filaRegistrosTrabajos["titulo"].'</h2>
-					<figure>
-						<img src="img/trabajos/'.$filaRegistrosTrabajos["imagen"].'" alt="" class="img-responsive img-rounded">
-					</figure>
-					<hr>
-                    <div class="container-fluid">
-                        <div class="row text-center">
-                        	<div class="col-md-4 col-xs-4"><span class="glyphicon glyphicon-user"></span> <small>'.$filaRegistrosTrabajos["autor"].'</small></div>
-                        	<div class="col-md-4 col-xs-4"><span class="glyphicon glyphicon-calendar"></span> <small>'.$filaRegistrosTrabajos["fecha"].'</small></div>
-                        	<div class="col-md-4 col-xs-4"><span class="glyphicon glyphicon-comment"></span> <small>'.$totalComentarios.'</small></div>
-                        </div>
-                    </div>
-                    <hr>
-					<p class="text-justify">'.$filaRegistrosTrabajos["descripcion"].'</p>
-					<div class="text-right">
-						<form action="trabajos.php" method="post">
-							<input type="hidden" name="idt" value="'.$filaRegistrosTrabajos["id_trabajos"].'">
-							<button type="submit" class="btn btn-primary"><span class="glyphicon-glyphicon-plus"> info</span></button>
-						</form>
-					</div>
-				</article>';				
-			}						
+				$trabajo = $trabajo.'<div class="panel panel-default trabajo">
+					<div class="panel-heading" style="background: url(img/trabajos/'.$filaRegistrosTrabajos["imagen"].'); background-size: cover;"></div>
+					<div class="panel-body">
+						<figure class="center-block">
+							<img src="img/JuanKarloz.jpg" alt="" class="img-responsive">
+						</figure>
+						<h3 class="panel-title text-center text-capitalize">
+							<strong>'.$filaRegistrosTrabajos["titulo"].'</strong>
+						</h3>
+						<p class="text-center">
+							<span class="glyphicon glyphicon-user"></span> 
+							<small>by '.$filaRegistrosTrabajos["autor"].'</small>
+						</p>
+						<div class="row">
+							<div class="col-md-6 col-xs-6 text-center">
+								<span class="glyphicon glyphicon-calendar"></span> <small>'.$filaRegistrosTrabajos["fecha"].'</small>
+							</div>
+							<div class="col-md-6 col-xs-6 text-center">
+								<span class="glyphicon glyphicon-comment"></span> <small>'.$totalComentarios.'</small>
+							</div>
+						</div>
+						<br>
+						<div class="row">
+							<div class="col-md-12 col-xs-12">
+								<form action="trabajos.php" method="post">
+									<input type="hidden" name="idt" value="'.$filaRegistrosTrabajos["id_trabajos"].'">
+									<button type="submit" class="btn btn-info btn-lg btn-block"><span class="glyphicon glyphicon-plus"> Info</span></button>
+								</form>
+							</div>
+						</div>
+					</div>					
+				</div>';
+			}
 
 			$datos = array("trabajo" => $trabajo, "paginado" => $lista);
 			echo json_encode($datos);
