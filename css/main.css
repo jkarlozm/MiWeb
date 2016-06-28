@@ -396,6 +396,12 @@ div.datosContacto div.media-left > i.glyphicon{
 	padding: 5px;	
 }
 
+div.datosContacto > div.well h4{
+	font-weight: bolder;
+	letter-spacing: 2px;
+	font-size: 25px;
+}
+
 div.datosContacto i.glyphicon-send{
 	color: #4ed0d1;
 }
@@ -404,6 +410,10 @@ div.datosContacto i.glyphicon-phone{
 }
 div.datosContacto i.glyphicon-map-marker{
 	color: #fb5454;
+}
+
+textarea#mensajecorreo{
+	resize: none;
 }
 
 @media (max-width: 768px){

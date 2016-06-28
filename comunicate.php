@@ -5,50 +5,56 @@
     <!--Contenido-->
     <section class="app-comunicate">
         <div class="container">
-            <div class="row" id="alertaCorreo">                
+            <div class="row" id="mensajeAlerta">
             </div>
+            <div class="row form-group">
+                <h3 class="text-center">Escríbeme</h3>
+                <p class="text-center">Cuentame de tu proyecto, dudas, sugerencias ó simplemente
+                    me quieres ofrecer un sueldo millonario, aquí esta el medio.</p>
+            </div>
+            <!-- Formulario de contacto -->
             <div class="row">
                 <div class="col-xs-12 col-sm-7 col-md-7">
-                    <!--Formulario comunicate-->
-                    <p>Escríbeme</p>
-                    <p class="text-justify">Cuentame de tu proyecto, dudas, sugerencias ó simplemente
-                    me quieres ofrecer un sueldo millonario, aquí esta el medio.</p>
                     <div class="panel panel-primary">
                       <div class="panel-heading">
-                        <h3 class="panel-title text-center">Contacto</h3>
+                        <h4 class="panel-title text-center">Contacto</h4>
                       </div>
                       <div class="panel-body">
-                        <form>
-                            <div class="form-group">
-                                <div class="input-group">
-                                    <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
-                                    <input type="text" maxlength="30" class="form-control" placeholder="Nombre" id="nombre">
-                                </div>
+                        <form id="formContacto">
+                            <div class="form-group form-group-lg input-group">
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+                                <input type="text" maxlength="30" class="form-control" placeholder="Nombre*" id="nombre">
                             </div>
-                            <div class="form-group">
-                                <div class="input-group">
+                            <div class="form-group form-group-lg input-group">
                                     <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></span>
-                                    <input type="email" class="form-control" placeholder="Correo" id="correo">
-                                </div>                                
+                                    <input type="email" class="form-control" placeholder="Correo*" id="correo">
                             </div>
-                            <div class="form-group">
-                                <div class="input-group">
+                            <div class="form-group form-group-lg input-group">
                                     <span class="input-group-addon"><span class="glyphicon glyphicon-phone"></span></span>
                                     <input type="tel" maxlength="10" class="form-control" placeholder="Teléfono" id="telefono">
-                                </div>
+                            </div>
+                            <div class="form-group form-group-lg input-group">
+                                    <span class="input-group-addon"><span class="glyphicon glyphicon-link"></span></span>
+                                    <input type="text" class="form-control" placeholder="Página web" id="siteweb">
+                            </div>
+                            <div class="form-group form-group-lg">
+                                <textarea rows="3" class="form-control" placeholder="Escribe tu mensaje aquí...*" id="mensajecorreo"></textarea>
+                            </div>
+                            <div class="form-group input-group form-group-lg">
+                                <span class="input-group-addon">                                  
+                                    <img src="librerias/imagen.php" alt="captcha">
+                                </span>
+                                <input type="text" class="form-control" placeholder="Código captcha*" id="codigoCaptcha" maxlength="5">
                             </div>
                             <div class="form-group">
-                                <textarea rows="3" class="form-control" placeholder="Escribe tu mensaje aquí..." id="mensajecorreo"></textarea>
-                            </div>
-                            <div class="form-group text-right">
-                                <button type="button" id="enviarCorreo" class="btn btn-success"><span class="glyphicon glyphicon-send"></span> Enviar</button>
+                                <button type="button" id="enviarCorreo" class="col-xs-12 col-md-3 col-md-offset-9 btn btn-success btn-lg"><span class="glyphicon glyphicon-send"></span> Enviar</button>
                             </div>
                         </form>
                       </div>
                     </div>                       
                 </div>
+                <!-- Datos de contacto -->
                 <div class="col-xs-12 col-sm-5 col-md-5 datosContacto">
-                    <p>Información de Contacto</p>
                     <div class="well">
                         <div class="media">
                             <div class="media-left">
@@ -84,10 +90,11 @@
                     </div>
                 </div>
             </div>
+            <!-- Ubicación mapa -->
             <div class="row">
-                <div class="col-xs-12">
+                <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="embed-responsive embed-responsive-16by9">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7543.167271673289!2d-98.14024977380375!3d19.038060236535028!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cfc02391be945d%3A0x930be2adb4f61c4c!2sEl+Salvador%2C+Her%C3%B3ica+Puebla+de+Zaragoza%2C+Pue.!5e0!3m2!1ses!2smx!4v1442935154159" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7543.167271673289!2d-98.14024977380375!3d19.038060236535028!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cfc02391be945d%3A0x930be2adb4f61c4c!2sEl+Salvador%2C+Her%C3%B3ica+Puebla+de+Zaragoza%2C+Pue.!5e0!3m2!1ses!2smx!4v1442935154159" width="600" height="100" frameborder="0" style="border:0" allowfullscreen></iframe>
                     </div>                    
                 </div>
             </div>

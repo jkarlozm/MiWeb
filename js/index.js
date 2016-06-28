@@ -1,6 +1,6 @@
 $(menuUno(), muestraSeisTrabajos(), menuInferior(), menuDos(), pagination(1), mostrarComentarios($("#idtrabajo").val()));
 
-$(function  () {
+$(function() {
 	/*Descarga currículum*/
 	$("#downcurriculum").click(function () {
 		document.location = "Currículum.zip";
@@ -63,46 +63,97 @@ $(function  () {
 		}
 		else { swal("Ingresa tú nombre", "", "info");}
 	});	
+});
 
-	/*Formulario de Contacto*/
-	$("#enviarCorreo").click(function () {
-		if ($("#nombre").val() != "") {
-			if ($("#correo").val() != "") {
-				if ($("#telefono").val() != "") {
-					if ($("#mensajecorreo").val() != "") {
-						$.ajax({
-							url: 'librerias/correo.php',
-							type: 'POST',
-							data: {name: $("#nombre").val(), mail: $("#correo").val(), phone: $("#telefono").val(), msj: $("#mensajecorreo").val()},
-							success: function (response) {								
-								if (response == 1) {
-									$("#alertaCorreo").addClass("alert alert-info alert-dismissible");
-									$("#alertaCorreo").html('<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button> Tu mensaje fue enviado correctamente');
-									$("#nombre").val("");
-									$("#correo").val("");
-									$("#telefono").val("");
-									$("#mensajecorreo").val("");
-								}
-								if(response == 2){
-									$("#alertaCorreo").addClass("alert alert-warning alert-dismissible");
-									$("#alertaCorreo").html('<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button> Fallo el envio de tu mensaje');
-								}								
-							}
-						});
-					}
-					else{swal("No has escrito tu mensaje", "", "info");}
-				}
-				else{
-					swal("Ingresa un número de telefono", "", "info");
-				}
+/*Formulario de Contacto*/
+	$(document).ready( function(){
+		//Validación de campos
+		$("#nombre").keyup(validarNombre);
+		$("#correo").keyup(validarCorreo);
+		$("#mensajecorreo").keyup(validarMensaje);
+
+		//Funciones de validación
+		function validarNombre() {
+			//Validar campos formulario contacto
+			if ( $("#nombre").val() == null || $("#nombre").val().length == 0 || /^\s+$/.test( $("#nombre").val() ) ) {
+				$("#iconInput").remove();
+				$("#nombre").parent().removeClass("has-success").addClass("has-warning has-feedback");
+				$("#nombre").parent().append("<span id='iconInput' class='glyphicon glyphicon-remove-circle form-control-feedback'></span>");
+				return false;
 			}
 			else{
-				swal("Ingresa un Correo", "", "info");
+				$("#iconInput").remove();
+				$("#nombre").parent().removeClass("has-warning").addClass("has-success has-feedback");
+				$("#nombre").parent().append("<span id='iconInput' class='glyphicon glyphicon-ok-circle form-control-feedback'></span>");
+				return true;
 			}
-		}
-		else{ swal("Ingresa un nombre", "", "info");}
+		};
+		function validarCorreo() {
+			//Validar campos formulario contacto
+			if ( !/^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/.test( $("#correo").val() ) || $("#correo").val() == null || $("#correo").val().length == 0 || /^\s+$/.test( $("#correo").val() ) ) {
+				$("#iconInput1").remove();
+				$("#correo").parent().removeClass("has-success").addClass("has-warning has-feedback");
+				$("#correo").parent().append("<span id='iconInput1' class='glyphicon glyphicon-remove-circle form-control-feedback'></span>");		
+				return false;
+			}
+			else{
+				$("#iconInput1").remove();
+				$("#correo").parent().removeClass("has-warning").addClass("has-success has-feedback");
+				$("#correo").parent().append("<span id='iconInput1' class='glyphicon glyphicon-ok-circle form-control-feedback'></span>");
+				return true;
+			}
+		};
+		function validarMensaje() {
+			//Validar campos formulario contacto
+			if ( $("#mensajecorreo").val() == null || $("#mensajecorreo").val().length == 0 || /^\s+$/.test( $("#mensajecorreo").val() ) ) {
+				$("#iconInput3").remove();
+				$("#mensajecorreo").parent().removeClass("has-success").addClass("has-warning has-feedback");
+				$("#mensajecorreo").parent().append("<span id='iconInput3' class='glyphicon glyphicon-remove-circle form-control-feedback'></span>");		
+				return false;
+			}
+			else{
+				$("#iconInput3").remove();
+				$("#mensajecorreo").parent().removeClass("has-warning").addClass("has-success has-feedback");
+				$("#mensajecorreo").parent().append("<span id='iconInput3' class='glyphicon glyphicon-ok-circle form-control-feedback'></span>");
+				return true;
+			}
+		};
+
+		//Botón para enviar mensaje
+		$("#enviarCorreo").click(function () {
+			if( validarNombre() && validarCorreo() && validarMensaje() && $("#codigoCaptcha").val().length > 0 ) {
+				$.ajax({
+					type: "POST",
+					url: "librerias/correo.php",
+					data: {name: $("#nombre").val(), email: $("#correo").val(), telphone: $("#telefono").val(), siteWeb: $("#siteweb").val(), msj: $("#mensajecorreo").val(), codCapt: $("#codigoCaptcha").val()},
+					success: function(response){
+						switch(response){
+							case "1":
+								$("#mensajeAlerta").append('<div class="alert alert-success alert-dismissible" role="alert"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><p class="text-center">"Mensaje Enviado"</p></div>');
+								$("#formContacto")[0].reset();
+								$("#iconInput, #iconInput1, #iconInput2, #iconInput3").remove();
+								$("#nombre, #correo, #siteWeb, #mensajecorreo").parent().removeClass("has-success");
+								break;
+							case "2":
+								$("#mensajeAlerta").append('<div class="alert alert-success alert-dismissible" role="alert"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><p class="text-center">"El Mensaje no se a podido enviar"</p></div>');
+								break;
+							case "3":
+								$("#mensajeAlerta").append('<div class="alert alert-success alert-dismissible" role="alert"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><p class="text-center">"El código catpcha es incorrecto"</p></div>');
+								$("#codigoCaptcha").val('');
+								break;
+						}
+					}
+				})
+			}
+			else{
+				validarNombre();
+				validarCorreo();
+				validarMensaje();
+				$("#mensajeAlerta").append('<div class="alert alert-dismissible alert-info" role="alert"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button> <p class="text-center">"Hay campos vacios"</p></div>');
+			}
+		})
+
 	});
-});
 
 //Menú index
 function menuUno(){
