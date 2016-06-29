@@ -61,8 +61,9 @@
 			
 			while ($filaRegistrosTrabajos = mysqli_fetch_assoc($rSQLregistroTrabajos)) {
 				$totalComentarios = mysqli_num_rows(mysqli_query($conexion, "SELECT id_trabajos FROM comentarios WHERE id_trabajos = ".$filaRegistrosTrabajos["id_trabajos"]));
+				$imagenFondo = "'img/trabajos/".$filaRegistrosTrabajos["imagen"]."'";
 				$trabajo = $trabajo.'<div class="panel panel-default trabajo">
-					<div class="panel-heading" style="background: url(img/trabajos/'.$filaRegistrosTrabajos["imagen"].'); background-size: cover;"></div>
+					<div class="panel-heading" style="background: url('.$imagenFondo.'); background-size: cover;"></div>
 					<div class="panel-body">
 						<figure class="center-block">
 							<img src="img/JuanKarloz.jpg" alt="" class="img-responsive">
