@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="es"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="es"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang="es"> <![endif]-->
+<!--[if gt IE 8]><!-->  <head class="no-js" lang="es"> <!--<![endif]-->
         <meta charset="UTF-8">
         <title>KarlozWeb | Comunícate</title>
 
@@ -8,6 +11,9 @@
         <?php include('include/hojaestilo.php'); ?>
     </head>
     <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
         <!-- Menú -->
         <?php include('include/encabezado.php'); ?>
 

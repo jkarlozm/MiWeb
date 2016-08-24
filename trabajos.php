@@ -10,25 +10,25 @@
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="es"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9" lang="es"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="es"> <!--<![endif]-->
-	<head>		
-		<?php
-			//Hojas estilo
-			include('include/hojaestilo.php');
-		?>
+	<head>
 		<meta charset="UTF-8">
 		<title>KarlozWeb | <?php echo $filaTrabajoDetalle['titulo']  ?></title>
-
+		
+		<!-- Hojas de estilo -->
+		<?php include_Once 'include/hojaestilo.php'; ?>
 	</head>
 	<body>
 		<!--[if lt IE 8]>
 	        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 	    <![endif]-->
 		
-		<?php
-			include('include/encabezado.php');
-			include('include/botonarriba.php');
-		?>
+		<!-- Menú -->
+		<?php include_Once 'include/encabezado.php'; ?>
 
+		<!-- Botón ir arriba -->
+		<?php include_once 'include/botonarriba.php';?>
+
+	    <!-- Contenido -->
 	    <section class="imagen">
 			<div class="container">
 				<!--Cuerpo Noticia-->
@@ -97,10 +97,11 @@
 				</div>
 			</div>
 		</section>
+		
+		<!-- Pie de Página -->
+		<?php include_Once 'include/pie.php'; ?>
 
-		<?php 
-			include('include/pie.php');
-			include('include/javascript.php');
-		?>
+		<!-- Scripts JS -->
+		<?php include_Once 'include/javascript.php'; ?>
 	</body>
 </html>
