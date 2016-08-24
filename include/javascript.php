@@ -4,11 +4,11 @@
 <!--Bootstrap-->
 <script src="js/vendor/bootstrap.min.js"></script>
 
-<!--JavaScript-->
-<script type="text/javascript" src="js/index.js"></script>
-
 <!--Sweet Alert-->
 <script src="js/vendor/sweetalert.min.js"></script>
+
+<!--JavaScript-->
+<script type="text/javascript" src="js/index.js"></script>
 
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
 <script>
