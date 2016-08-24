@@ -8,10 +8,10 @@
                         </div>
                     </div>
                     <div class="col-md-6 social">
-                        <a href="https://www.facebook.com/jouet.casse" target="-blank"><span class="icon-facebook" title="Seamos amigos en Facebook"></span></a>                        
-                        <a href="https://twitter.com/Juan_KarloZ" target="-blank"><span class="icon-twitter" title="Sigueme en Twitter"></span></a>
-                        <a href="https://mx.linkedin.com/in/karlozarate" target="-blank"><span class="icon-linkedin2" title="Agregame a LinkedIn"></span></a>
-                        <a href="https://github.com/xharly" target="-blank"><span class="icon-github4" title="Sigueme en GitHub"></span></a>
+                        <a href="https://www.facebook.com/jouet.casse" target="-blank"><span class="fa fa-facebook-f" title="Seamos amigos en Facebook"></span></a>                        
+                        <a href="https://twitter.com/Juan_KarloZ" target="-blank"><span class="fa fa-twitter" title="Sigueme en Twitter"></span></a>
+                        <a href="https://mx.linkedin.com/in/karlozarate" target="-blank"><span class="fa fa-linkedin" title="Agregame a LinkedIn"></span></a>
+                        <a href="https://github.com/xharly" target="-blank"><span class="fa fa-github" title="Sigueme en GitHub"></span></a>
                     </div>
                 </div>
             </div>

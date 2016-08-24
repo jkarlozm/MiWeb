@@ -34,6 +34,15 @@ $(function() {
 		});
 	});
 
+	// Ir a la sección de comentarios
+	$(document).ready(function () {
+		$("#irComentario").click(function (){
+			$('body, html').animate({
+				scrollTop: $("#hacerComentario").offset().top - document.body.clientHeight + $("#hacerComentario").height()
+			}, 1000);
+		});		
+	});
+
 	/*Insertar Comentarios*/
 	$("#instcomen").click(function () {
 		if ($("#nombre").val() != "") {

@@ -61,7 +61,7 @@
                                 <i class="glyphicon glyphicon-send"></i>
                             </div>
                             <div class="media-body">
-                                <h4 class="media-heading">Escribeme</h4>
+                                <h4 class="media-heading">Escríbeme</h4>
                                 <p>jkarloz2903@gmail.com</p>
                             </div>
                         </div>                        
@@ -72,7 +72,7 @@
                                 <i class="glyphicon glyphicon-phone"></i>
                             </div>
                             <div class="media-body">
-                                <h4 class="media-heading">Llamame</h4>
+                                <h4 class="media-heading">Llámame</h4>
                                 <p>044-22.28.14.32.77</p>
                             </div>
                         </div>                        
@@ -101,5 +101,5 @@
         </div>
     </section>        
 
-    <!--Pie de pagina-->        
-    <?php include ('librerias/pie.php'); ?>
+<!--Pie de pagina-->        
+<?php include ('librerias/pie.php'); ?>

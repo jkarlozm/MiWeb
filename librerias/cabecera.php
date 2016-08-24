@@ -19,7 +19,6 @@
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="css/bootstrap-theme.min.css">
         <!--Iconos-->
-        <link rel="stylesheet" href="css/icomoon.css">
         <link rel="stylesheet" href="css/font-awesome.min.css">
         <!--Animaciones-->
         <link rel="stylesheet" href="css/animate.css">

@@ -19,7 +19,7 @@
     	<link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="css/bootstrap-theme.min.css">
         <!--Iconos-->
-        <link rel="stylesheet" href="css/icomoon.css">
+        <link rel="stylesheet" href="css/font-awesome.min.css">
         <!--Animaciones-->
         <link rel="stylesheet" href="css/animate.css">        
         <!--Fuente-->     
@@ -64,7 +64,7 @@
 
             <div class="icon">
                 <a href="#index2" class="animated bounce" id="flecha">
-                    <span class="icon-circle-down"></span>
+                    <span class="fa fa-chevron-circle-down"></span>
                 </a>
             </div>
 
