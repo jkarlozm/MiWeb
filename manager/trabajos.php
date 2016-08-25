@@ -37,7 +37,7 @@
                         <div class="row" id="mensajeSubirTrabajo"></div>
                     </div>
                     <form id="subirTrabajo">
-                        <input type="text" id="idtrabajo">
+                        <input type="hidden" id="idtrabajo">
                         <div class="form-group">
                             <input type="text" id="title" name="title" placeholder="Título" class="form-control">
                         </div>

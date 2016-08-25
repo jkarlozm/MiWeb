@@ -147,8 +147,7 @@
 	                        	<div class="col-md-4 col-xs-4"><span class="glyphicon glyphicon-comment"></span> <small>'.$totalComentariosAdmin.'</small></div>
 	                        </div>
                         </div>
-                        <hr>
-                        <p class="text-justify">'.$filaRegistrosTrabajosAdmin["descripcion"].'</p>
+                        <hr>                        
                         <div class="text-right">
                             <button type="button" onclick="mostrarInfoTrabajo(this.id)" class="btn btn-info editart" id="'.$filaRegistrosTrabajosAdmin["id_trabajos"].'"><span class="glyphicon glyphicon-pencil"></span> Editar</button>
                             <button type="button" class="btn btn-warning" onclick="eliminarTrabajo(this.id)" id="'.$filaRegistrosTrabajosAdmin["id_trabajos"].'" ><span class="glyphicon glyphicon-trash"></span> Eliminar</button>
