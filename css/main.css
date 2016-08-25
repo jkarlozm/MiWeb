@@ -274,6 +274,15 @@ p.app-separador{
 	font-size: 60px;
 }
 
+div.infoAutor{
+	background-color: rgba(0,0,0,0.3);
+	padding: 20px 0;
+}
+
+figure.sobreAutor{
+	width: 35%;
+}
+
 /*Comentarios*/
 div#grupo-comentarios div.list-group figure{
 	border: 3px solid white;

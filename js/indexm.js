@@ -226,14 +226,16 @@ function  cerrarSesion() {
 /* ==========================================================================
    CRUD Trabajos
    ========================================================================== */
-//Botones de acciones para los trabajos
-$(document).ready(function () {
-	$("#title").val("");
-	$("#image").val("");
-	$("#description").val("");
-	$("#tools").val("");
-	$("#url").val("");
-	$("#updatework").attr("disabled", true);
+//Botones Modal
+$("#modalRegistrar").click(function(){	
+	$("#updatework").hide();
+	$("#savework, #image").show();
+	$("#myModal").modal('show');	
+});
+
+$("#cancelwork").click(function(){
+	$("#myModal").modal('hide');
+	$("#idTrabajo, #title, #image, #description, #githubUrl, #url").val('');
 });
 
 //Eliminar Trabajo
@@ -279,10 +281,10 @@ function eliminarTrabajo(idTrabajo) {
 };
 	
 //Registrar Trabajo
-$(function(){	
+$(function(){
 	$("#subirTrabajo").submit(function(){		
-		var comprobar = $("#title").val().length * $("#image").val().length * $("#description").val().length * $("#url").val().length;
-		if(comprobar > 0){			
+		var comprobar = $("#title").val().length * $("#image").val().length * $("#description").val().length * $("#githubUrl").val().length * $("#url").val().length;
+		if(comprobar > 0){
 			var formulario = $("#subirTrabajo");
 			var datos = formulario.serialize();
 			var archivos = new FormData();
@@ -317,7 +319,7 @@ $(function(){
   		 					$("#mensajeSubirTrabajo").addClass("alert alert-success alert-dismissible");
   		 					$("#mensajeSubirTrabajo").html("El trabajo a sido registrado satisfactoriamente");
   		 					$("#mensajeSubirTrabajo").append('<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>');
-  		 					$("#subirTrabajo")[0].reset();
+  		 					$("#idTrabajo, #title, #image, #description, #githubUrl, #url").val('');
   		 					break;
   		 				case "5":
   		 					$("#mensajeSubirTrabajo").addClass("alert alert-warning alert-dismissible");
@@ -337,48 +339,47 @@ $(function(){
 	});
 });
 
-//Cargar datos
-$("button[class*=editart]").click( function () {
-	var identificador = $(this).attr('id');
-	var parametros = {"idt": identificador, type: 2};
+//Cargar datos de un trabajo
+function mostrarInfoTrabajo(trabajoModificar) {	
+	var parametros = {"idt": trabajoModificar, type: 5};
 	$.ajax({			
 		data: parametros,
-		url: '../librerias/trabajos.php',
+		url: '../librerias/libTrabajos.php',
 		type: 'POST',
 		dataType: "json",
 		success: function (response) {
-			$("#idtrabajo").val(response.id);
+			$("#idtrabajo").val(response.idt);
 			$("#title").val(response.title);
-			$("#image").val(response.img);
+			// $("#image").val(response.img);
 			$("#description").val(response.desc);
-			$("#tools").val(response.tools);
+			$("#githubUrl").val(response.git);
 			$("#url").val(response.url);
-			$("#savework").attr("disabled", true);
-			$("#updatework").attr("disabled", false);
+			$("#savework, #image").hide();
+			$("#updatework").show();
+			$("#myModal").modal('show');
 		}
 	});
-});
+};
 
 //Actualizar trabajos
-$("#updatework").click(function () {
-	if (($("#title").val() != "") && ($("#image").val() != "") && ($("#description").val() != "") && ($("#tools").val() != "") && ($("#url").val() != "")) {
+$("#updatework").click(function () {	
+	if (($("#title").val() != "") && ($("#description").val() != "") && ($("#githubUrl").val() != "") && ($("#url").val() != "")) {
 		$.ajax({
-			data: {id: $("#idtrabajo").val(), ti: $("#title").val(), im: $("#image").val(), des: $("#description").val(), to: $("#tools").val(), ur: $("#url").val(), type: 5},
-			url: '../librerias/trabajos.php',
+			data: {id: $("#idtrabajo").val(), ti: $("#title").val(), des: $("#description").val(), git: $("#githubUrl").val(), ur: $("#url").val(), type: 6},
+			url: '../librerias/libTrabajos.php',
 			type: 'POST',
-			success: function () {
-				swal({   title: "Good Job!",
-						text: "El registro a sido actualizado", 
-						type: "success",							
-						confirmButtonColor: "#DD6B55",
-						confirmButtonText: "Ok",							
-						closeOnConfirm: false,							
-					},
-					function(isConfirm){
-						if (isConfirm) {
-							window.location="trabajos.php";
-						}
-					});
+			success: function (response) {
+				console.log(response);
+				switch (response){					
+					case '1':
+						$("#myModal").modal('hide');
+						$("#idTrabajo, #title, #image, #description, #githubUrl, #url").val('');
+						$("#mensajeTrabajoManger").append('<div class="alert alert-success alert-dismissible" role="alert"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><p class="text-center">"Trabajo Actualizado"</p></div>');
+						break;
+					case '2':
+						$("#mensajeSubirTrabajo").append('<div class="alert alert-warning alert-dismissible" role="alert"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><p class="text-center">"¡Error! al actualizar el trabajo"</p></div>');
+						break;
+				}
 			}
 		});
 	} 
@@ -394,7 +395,7 @@ function paginationAdmin(partidaAdmin){
 		url: "../librerias/libTrabajos.php",
 		data: {partidaAdmin: partidaAdmin, type:3},
 		dataType: "json",
-		success: function(response){			
+		success: function(response){
 			$("#muestraTrabajosManager").html(response.trabajoAdmin);
 			$("#paginadoManager").html(response.paginadoAdmin);
 		}

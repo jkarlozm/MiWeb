@@ -48,30 +48,45 @@
 								<a href="<?php echo $filaTrabajoDetalle['url'] ?>" class="share-fb btn btn-info btn-lg btn-block" target="_blank"><i class="glyphicon glyphicon-link fa-lg"></i> Visitar</a>
 							</div>
 							<div class="col-md-4 col-xs-12 col-sm-4">
-								<a href="https://github.com/xharly" target="_blank" class="btn btn-success btn-lg btn-block"><i class="fa fa-github fa-lg"></i> GitHub</a>
+								<a href="<?php echo $filaTrabajoDetalle['github'] ?> " target="_blank" class="btn btn-success btn-lg btn-block"><i class="fa fa-github fa-lg"></i> GitHub</a>
 							</div>
 						</div>						
 					</div>
 
 					<div class="container">
 						<div class="row">
-							<div class="col-md-6 col-sm-6 col-xs-12">
+							<div class="col-md-8 col-md-offset-1">
 								<p class="text-justify"><?php echo $filaTrabajoDetalle['descripcion'] ?></p>
-							</div>
-							<div class="col-md-6 col-sm-6 col-xs-12">
-								<?php echo $filaTrabajoDetalle ['herramientas']; ?>
-							</div>
+							</div>							
 						</div>						
 					</div>
 					<?php }	?>
 				</div>
 
-				<!--Formulario de comentarios-->			
+				<hr>
 				<div class="row">
-					<div class="well well-sm">
-						<h3><i class="fa fa-comments-o fa-lg"></i> <strong>Comentarios</strong></h3>
+					<div class="col-md-6 col-md-offset-1">
+						<blockquote class="blockquote-reverse">
+							<p>ICT Engineer | Web Developer | Geek | Fan of Open Source. <br>Working with heart !!</p>
+							<footer>Juan Carlos Zárate Moguel</footer>
+						</blockquote>
+					</div>
+					<div class="col-md-4">
+						<figure class="sobreAutor center-block">
+							<img src="img/JuanKarloz.jpg" alt="karloz" class="img-responsive img-circle">
+						</figure>
 					</div>
 				</div>
+				<hr>
+
+				<!--Sección de comentarios-->			
+				<div class="row">
+					<div class="well well-sm">
+						<h3><i class="fa fa-comments-o fa-lg"></i> <strong class="text-uppercase">Deja un comentario</strong></h3>
+					</div>
+				</div>
+
+				<!-- Formulario de comentarios -->
 				<div class="row form-group" id="hacerComentario">
 					<div class="col-md-6 col-md-offset-3">
 						<form>
@@ -91,7 +106,7 @@
 						</form>
 					</div>
 				</div>
-			
+
 				<!--Comentarios-->
 				<div class="container" id="grupo-comentarios">
 				</div>

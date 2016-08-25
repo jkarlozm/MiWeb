@@ -150,7 +150,7 @@
                         <hr>
                         <p class="text-justify">'.$filaRegistrosTrabajosAdmin["descripcion"].'</p>
                         <div class="text-right">
-                            <button type="button" class="btn btn-info editart" id="'.$filaRegistrosTrabajosAdmin["id_trabajos"].'" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-pencil"></span> Editar</button>
+                            <button type="button" onclick="mostrarInfoTrabajo(this.id)" class="btn btn-info editart" id="'.$filaRegistrosTrabajosAdmin["id_trabajos"].'"><span class="glyphicon glyphicon-pencil"></span> Editar</button>
                             <button type="button" class="btn btn-warning" onclick="eliminarTrabajo(this.id)" id="'.$filaRegistrosTrabajosAdmin["id_trabajos"].'" ><span class="glyphicon glyphicon-trash"></span> Eliminar</button>
                         </div>
                     </article>';
@@ -178,6 +178,29 @@
 			}
 			else{
 				//No se pudo eliminar el registor
+				echo "2";
+			}
+			break;
+		case 5:
+			//Recupera la información de un trabajo para poderla modificar.
+			$rSQLdatosTrabajo = mysqli_query($conexion, "SELECT id_trabajos, titulo, descripcion, github, url FROM trabajos WHERE id_trabajos = ".$_POST['idt']);
+			while ($filaInfoTrabajo = mysqli_fetch_assoc($rSQLdatosTrabajo)) {
+				$idTrabajo = $filaInfoTrabajo['id_trabajos'];
+				$titulo = $filaInfoTrabajo['titulo'];
+				$descripcion = $filaInfoTrabajo['descripcion'];
+				$github = $filaInfoTrabajo['github'];
+				$url = $filaInfoTrabajo['url'];
+			}
+			$datosTrabajo = array('idt' => $idTrabajo, 'title' => $titulo, 'desc' => $descripcion, 'git' => $github, 'url' => $url);
+			echo json_encode($datosTrabajo);
+			break;
+		case 6:
+			//Actualizar trabajo
+			if( mysqli_query( $conexion, "UPDATE trabajos SET titulo = '".$_POST["ti"]."', descripcion = '".$_POST["des"]."', github = '".$_POST["git"]."', url = '".$_POST["ur"]."' WHERE id_trabajos = ".$_POST["id"] ) ){
+				//Trabajo actualiozado
+				echo "1";
+			} else{
+				//No se pudo actualizar el trabajo
 				echo "2";
 			}
 			break;
