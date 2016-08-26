@@ -12,6 +12,7 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="es"> <!--<![endif]-->
 	<head>
 		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>KarlozWeb | <?php echo $filaTrabajoDetalle['titulo']  ?></title>
 		
 		<!-- Hojas de estilo -->

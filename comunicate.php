@@ -5,6 +5,7 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9" lang="es"> <![endif]-->
 <!--[if gt IE 8]><!-->  <head class="no-js" lang="es"> <!--<![endif]-->
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>KarlozWeb | Comunícate</title>
 
         <!-- Hojas de estilo -->
