@@ -66,17 +66,17 @@
 
 				<hr>
 				<div class="row">
-					<div class="col-md-6 col-md-offset-1">
-						<blockquote class="blockquote-reverse">
-							<p>ICT Engineer | Web Developer | Geek | Fan of Open Source. <br>Working with heart !!</p>
-							<footer>Juan Carlos Zárate Moguel</footer>
-						</blockquote>
-					</div>
-					<div class="col-md-4">
+					<div class="col-xs-12 col-md-4 col-md-push-6 col-md-offset-1">
 						<figure class="sobreAutor center-block">
 							<img src="img/JuanKarloz.jpg" alt="karloz" class="img-responsive img-circle">
 						</figure>
 					</div>
+					<div class="col-xs-12 col-md-6 col-md-pull-4">
+						<blockquote class="blockquote-reverse">
+							<p>ICT Engineer | Web Developer | Geek | Fan of Open Source. <br>Working with heart !!</p>
+							<footer>Juan Carlos Zárate Moguel</footer>
+						</blockquote>
+					</div>					
 				</div>
 				<hr>
 
