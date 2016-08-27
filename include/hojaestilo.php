@@ -1,9 +1,9 @@
-<!--Estilos-->
-<link rel="stylesheet" href="css/main.css">
-
 <!--Bootstrap-->
 <link rel="stylesheet" href="css/bootstrap.min.css">
 <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+
+<!--Estilos-->
+<link rel="stylesheet" href="css/main.css">
 
 <!--Iconos-->
 <link rel="stylesheet" href="css/font-awesome.min.css">

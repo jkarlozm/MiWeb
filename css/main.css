@@ -34,7 +34,9 @@ header.index{
 	background-size: auto, cover;
 	padding-top: 10px;
 }
-nav.navbar{	
+nav.navbar{
+	position: absolute;	
+	width: 100%;
 	text-transform: uppercase;
 	letter-spacing: 1px;
 	font-size: 18px;
