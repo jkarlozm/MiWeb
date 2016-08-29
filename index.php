@@ -61,45 +61,42 @@
 
         <section class="index" id="index2">
             <div class="container">
+                <div class="row text-center">
+                    <h2 class="text-capitalize">i love what i do </h2>
+                </div>
                 <div class="row">
-                    <div class="col-md-6">
-                        <div class="panel panel-default">
-                          <div class="panel-heading text-right">
-                              <button class="btn btn-primary animated pulse" id="downcurriculum"><span class="glyphicon glyphicon-cloud-download"></span> Currículum</button>
-                          </div>
-                          <div class="panel-body">
-                            <figure class="center-block">
-                                <img src="img/JuanKarloz.jpg" alt="@Juan Karloz" class="img-responsive">
-                            </figure>
-                            <h5 class="panel-title text-center"><strong>Juan Carlos Zárate Moguel</strong></h5>
-                            <br>
-                            <p class="text-justify">Ingeniero en Tecnologías de la Información y Comunicación,
-                            egresado de la Universidad Tecnológica de Puebla (2011-2015).</p>
-                            <p class="text-justify frase">"La tecnología debería hacernos la vida mas fácil, pero cuando de veras la necesitas, no funciona."</p>
-                          </div>
+                    <div class="col-xs-12 col-sm-4">
+                        <div class="aboutContent">
+                            <i class="glyphicon glyphicon-console"></i>
+                            <h3>Programación</h3>
+                            <p>Desarrollo de aplicaciones web y de escritorio.</p>
                         </div>
                     </div>
-                    <div class="col-md-6">
-                        <p class="text-justify">
-                            Saludos gente...
-                            <br>
-                            <br>
-                            ¿Quién soy yo?
-                            <br>
-                            <br>
-                            Pues soy un chaval que gusta del <strong>Desarrollo Web</strong>, <strong>Programación web</strong>, <strong>Back end</strong>,
-                            <strong>Front end</strong>, <strong>Redes</strong> y soporte técncio en pocas palabras un todologo, ¿Porqué? pues simplemente
-                            soy un apasionado de las TIC's.
-                        </p>
-                        <p class="text-justify">
-                            Desde la edad de 18 años, años más años menos, me llamo la atención las maravillas que se pueden hacer con los ordenadores,
-                            el internet, las redes y en la actualidad eso que llaman el internet de las cosas todo esto dio como resultado el querer
-                            estudiar una carrera informatica. 
-                        </p>
-                        <p>
-                            Me gusta estar en constante aprendizaje ya sea a través de cursos o de manera autodidacta.
-                        </p>
-                        <p>En mis ratos de oscio gusto por leer, escuchar música, ver películas o hacer ejercicio.</p>
+                    <div class="col-xs-12 col-sm-4">
+                        <div class="aboutContent">
+                            <i class="glyphicon glyphicon-globe"></i>
+                            <h3>Redes</h3>
+                            <p>Certificación CCNA por parte de CISCO.</p>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-4">
+                        <div class="aboutContent">
+                            <i class="glyphicon glyphicon-wrench"></i>
+                            <h3>Soporte Técnico</h3>
+                            <p>Diagnosticar un fallo en el ordenar siempre representa un gran reto.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="karloz">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-8 col-xs-offset-2 text-center">
+                        <img src="img/JuanKarloz.jpg" alt="Juan Karloz" class="img-responsive img-circle center-block">
+                        <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate, repellat deserunt consequuntur</h4>
+                        <p class="text-uppercase">juan carlos zárate moguel</p>
                     </div>
                 </div>
             </div>

@@ -140,33 +140,64 @@ header.index div.icon a, header.index div.icon a span{
 	-moz-animation-iteration-count: infinite;
 }
 section.index{	
-	padding: 80px 0;
-	background-color: #f7f8fa;	
+	padding: 100px 0;	
 }
-section.index div.panel div.panel-heading{
-	background-image: url("../img/fondos/panelheader.jpg");
+section.index h2{
+	font-size: 52px;
+	font-weight: 900;
+}
+section.index div.row:nth-child(2){
+	margin-top: 30px;	
+}
+section.index div.aboutContent{
+	padding: 30px;
+	text-align: center;
+}
+section.index div.aboutContent i{
+	font-size: 4em;
+}
+section.index div.aboutContent h3{
+	text-transform: uppercase;
+	font-weight: 900;
+}
+section.index div.aboutContent p{
+	font-size: 18px;
+	line-height: 1.5;
+}
+section.karloz{
+	padding: 90px 0;
+	background: url("../img/fondos/puebla.jpg") no-repeat center center fixed;
 	background-size: cover;
-	height: 150px;
+	position: relative;
 }
-section.index div.panel div.panel-heading button#downcurriculum{
-	margin-top: 100px;
-	-webkit-animation-iteration-count: infinite;
-	-webkit-animation-duration: 2s;
+section.karloz:before{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	content: "";
+	background: url(../img/fondos/pattern.png) repeat;
+	background-color: rgba(0,0,0,0.6);
 }
-section.index div.panel div.panel-body figure{	
-	border: 3px solid white;
-	border-radius: 50%;
-	box-shadow: 0 1px 1px rgba(0,0,0,0.1);
-	margin-top: -100px;
-	margin-bottom: 10px;	
-	max-width: 150px;
-	overflow: hidden;
-}
-section.index div.panel div.panel-body figure img{
+section.karloz img{
 	width: 150px;
 	height: 150px;
 }
-section.index div.panel div.panel-body p.frase{font-style: italic;}
+section.karloz h4{
+	color: #fff;
+	font-weight: 400;
+	font-size: 15px;
+	line-height: 36px;	
+}
+section.karloz p{
+	color: #fff;
+	font-weight: 400;
+	font-size: 12px;
+}
+
 section.section2{	
 	padding: 80px 0px;
 	background-color: #f7f8fa;	
