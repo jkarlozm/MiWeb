@@ -29,32 +29,34 @@
         <?php include_Once 'include/botonarriba.php'; ?>
 
         <!--Menú-->
+        <nav class="navbar" id="menu1">                
+        </nav> <!--/menú-->
+        
         <header class="index">
-        	<nav class="navbar" id="menu1">                
-            </nav> <!--/menú-->
-
+            <div class="overlay"></div>
             <div class="entrada">
-                <h1 class="text-center"><span class="glyphicon glyphicon-globe"></span> Karloz Web</h1>
-                <div class="text-center">
-                    <strong><p id="frase1">Desarrollo backend</p></strong>
-                </div>
-                <div class="text-center">
-                    <strong><p id="frase2">Desarrollo Frontend</p></strong>
-                </div>
-                <div class="text-center">
-                    <p id="frase3">Redes</p>
-                </div>
-                <div class="text-center">
-                    <p id="frase4">Soporte Técnico</p>
+                <span class="glyphicon glyphicon-globe animated bounceInRight"></span>
+                <h1 class="animated bounceInLeft">Karloz Web</h1>
+                <hr>
+                <div class="contenido">
+                    <p>ICT Engineer | </p>
+                    <ul>
+                        <li>Web Developer</li>
+                        <li>PHP</li>
+                        <li>HTML5</li>
+                        <li>CSS3</li>
+                        <li>JS</li>
+                    </ul>                
+                    <p> | Geek | Fan of Open Source. </p>
                 </div>
             </div>
 
+            <!-- Icono flecha -->
             <div class="icon">
-                <a href="#index2" class="animated bounce" id="flecha">
-                    <span class="fa fa-chevron-circle-down"></span>
+                <a href="#index2" id="flecha">
+                    <span class="fa fa-chevron-circle-down animated infinite bounce"></span>
                 </a>
             </div>
-
         </header>
 
         <section class="index" id="index2">
