@@ -200,13 +200,13 @@ section.karloz img{
 section.karloz h4{
 	color: #fff;
 	font-weight: 400;
-	font-size: 15px;
+	font-size: 16px;
 	line-height: 36px;	
 }
 section.karloz p{
 	color: #fff;
 	font-weight: 400;
-	font-size: 12px;
+	font-size: 13px;
 }
 section.seisTrabajos{
 	padding: 100px 0;
@@ -289,6 +289,10 @@ section.datosCuriosos:before{
 	height: 100%;
 	background-color: rgba(34,34,34,0.5);
 }
+section.datosCuriosos div.container div.row:nth-child(1) h2{
+	font-size: 50px;
+	font-weight: 900;
+}
 section.datosCuriosos div.container div.row:nth-child(2){
 	margin-top: 30px;
 }
@@ -304,23 +308,47 @@ section.datosCuriosos div.container div.row:nth-child(2) h3{
 }
 section.section2{
 	width: 100%;
-	padding: 80px 0px;
-	background-color: #f7f8fa;	
+	padding: 100px 0;
 }
-section.section2 article.contenedor{
-	border: 1px solid white;
-	border-radius: 5px;
-	text-align: center;
-	padding: 20px 10px;
-	margin-bottom: 40px;
+section.section2 div.container div.row:nth-child(1) h2{
+	font-size: 50px;
+	font-weight: 900;
 }
-section.section2 article.contenedor:hover{
-	background-color: #AAF2D5;
-	border-color: #7AF4C8;
+section.section2 div.container div.row:nth-child(1){
+	margin-bottom: 30px;
 }
-section.section2 article.contenedor p.glyphicon{
-	color: #297258;
-	font-size: 60px;
+section.section2 div.container div.row:nth-child(2) div.col-xs-12{
+	padding: 30px 0;
+}
+section.section2 div.container div.row:nth-child(2) div.contenedor{
+	position: relative;
+	display: block;
+	width: 150px;
+	height: 150px;
+	margin: 20px auto 50px;
+	border-radius: 50%;
+	font-size: 62px;
+	line-height: 150px;
+	color: #fff;
+	background-color: #334959;	
+}
+section.section2 div.container div.row:nth-child(2) div.contenedor:before{
+	content: "";
+	position: absolute;
+	display: block;
+	width: 174px;
+	height: 174px;
+	top: -12px;
+	left: -12px;
+	border: 3px solid #334959;
+	border-radius: 50%;
+}
+section.section2 div.container div.row:nth-child(2) div h3{
+	margin-bottom: 15px;
+}
+section.section2 div.container div.row:nth-child(2) div p{
+	margin: auto;
+	max-width: 250px;
 }
 footer.index{
 	background: url(../img/fondos/footer.jpg)no-repeat center center;	

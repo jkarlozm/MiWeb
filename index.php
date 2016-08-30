@@ -98,7 +98,7 @@
                 <div class="row">
                     <div class="col-xs-8 col-xs-offset-2 text-center">
                         <img src="img/JuanKarloz.jpg" alt="Juan Karloz" class="img-responsive img-circle center-block">
-                        <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate, repellat deserunt consequuntur</h4>
+                        <h4>Ingeniero en Tecnológias de la Información y Comunicaciones, amante de la tecnología, le gusta aprender muchos lenguajes de programación, vive para apreciar la música RAP y R&B y su vicio es la comida.</h4>
                         <p class="text-uppercase">juan carlos zárate moguel</p>
                     </div>
                 </div>
@@ -123,7 +123,7 @@
             <div class="container text-center">
                 <div class="row">
                     <div class="col-xs-12 text-uppercase">
-                        <h1>datos curiosos</h1>
+                        <h2>datos curiosos</h2>
                         <hr class="colored">
                     </div>
                 </div>
@@ -154,44 +154,43 @@
 
         <section class="section2">
             <div class="container">
-                <div class="row">
-                    <h2 class="text-center">Servicios</h2>
-                    <br>
-                    <div class="col-md-4">
-                        <article class="contenedor">
+                <div class="row text-center">
+                    <div class="col-xs-12">                            
+                        <h2>Mis Servicios</h2>
+                        <hr class="colored">
+                    </div>
+                </div>
+                <div class="row text-center">
+                    <div class="col-xs-12 col-sm-4">
+                        <div class="contenedor">
                             <p class="glyphicon glyphicon-wrench"></p>
-                            <h3>Soporte Técnico</h3>
-                            <p>Un ordenador en buen estado, siempre funcionara al 100% y te ahorras corajes y maldiciones.</p>
-                        </article>
+                        </div>
+                        <h3>Soporte Técnico</h3>
+                        <p>Un ordenador en buen estado, siempre funcionara al 100% y te ahorras corajes y maldiciones.</p>
                     </div>
-                    <div class="col-md-4">
-                        <article class="contenedor">
+                    <div class="col-xs-12 col-sm-4">
+                        <div class="contenedor">
                             <p class="glyphicon glyphicon-file"></p>
-                            <h3>Maquetación de Páginas Web</h3>
-                            <p>Todo negocio en la actualidad merece destacar en internet.</p>
-                        </article>
+                        </div>
+                        <h3>Maquetación de Páginas Web</h3>
+                        <p>Todo negocio en la actualidad merece destacar en internet.</p>
                     </div>
-                    <div class="col-md-4">
-                        <article class="contenedor">
+                    <div class="col-xs-12 col-sm-4">
+                        <div class="contenedor">
                             <p class="glyphicon glyphicon-console"></p>
-                            <h3>Aplicaciones Web</h3>
-                            <p>En la actualidad todo negocio necesita de un sistema que le ayude a llevar el control de sus procesos.</p>
-                        </article>
+                        </div>
+                        <h3>Aplicaciones Web</h3>
+                        <p>En la actualidad todo negocio necesita de un sistema que le ayude a llevar el control de sus procesos.</p>
                     </div>
-                </div>
-                <div class="row">                    
-                    <div class="col-md-4">
-                        <article class="contenedor">
+                    <div class="clearfix hidden-xs"></div>
+                    <div class="col-xs-12 col-sm-4">
+                        <div class="contenedor">
                             <p class="glyphicon glyphicon-signal"></p>
-                            <h3>Redes</h3>
-                            <p>Una conexión a internet segura, te ayuda a proteger tu información de intrusos y te brinda grandes beneficios.</p>
-                        </article>
+                        </div>
+                        <h3>Redes</h3>
+                        <p>Una conexión a internet segura, te ayuda a proteger tu información de intrusos y te brinda grandes beneficios.</p>
                     </div>
-                    <div class="col-md-4">                        
-                    </div>
-                    <div class="col-md-4">                        
-                    </div>
-                </div>
+                </div>                
             </div>
         </section>
 
