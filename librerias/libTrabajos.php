@@ -11,18 +11,37 @@
 	switch ($_POST["type"]) {
 		case 1:
 			//Muestra solo los ultimos 6 trabajos realizados.
-			$rSQL6trabajos = mysqli_query($conexion, "SELECT titulo, imagen, url FROM trabajos ORDER BY id_trabajos DESC LIMIT 6");
-			if(mysqli_num_rows($rSQL6trabajos) > 0){ ?>
-				<h2 class="text-center text-capitalize">trabajos</h2>
+			$rSQL6trabajos = mysqli_query($conexion, "SELECT titulo, imagen, url, github FROM trabajos ORDER BY id_trabajos DESC LIMIT 6");
+			if(mysqli_num_rows($rSQL6trabajos) > 0){ ?>				
 				<?php
+					$contador = 1;
                 	while($fila6Trabajos = mysqli_fetch_assoc($rSQL6trabajos)) { ?>
-	                    <div class="panel panel-default trabajo">
-	                    	<div class="panel-heading" style="background: url('img/trabajos/<?php echo $fila6Trabajos['imagen']; ?>'); background-size: cover;">
+	                    <div class="col-xs-12 col-sm-4">
+	                    	<div style="overflow: hidden; position:relative;">
+		                    	<img style="position: relative;" class="img-responsive" src="img/trabajos/<?php echo $fila6Trabajos['imagen']; ?>">
+		                    	<div class="caption">
+		                    		<div class="captionText">
+		                    			<span class="textTitle"><?php echo $fila6Trabajos['titulo'];?></span>
+		                    			<div class="textCategory">
+		                    				<a href="<?php echo $fila6Trabajos['url']?>" >
+		                    					<span class="fa fa-link"></span>
+		                    				</a>
+		                    				<a href="<?php echo $fila6Trabajos['github']?>">
+		                    					<span class="fa fa-github"></span>
+		                    				</a>		                    				
+		                    			</div>
+		                    		</div>
+		                    		<div class="captionBg"></div>
+		                    	</div>
 	                    	</div>
-	                    	<div class="panel-body">
-	                            <h2 class="text-center text-capitalize"><?php echo $fila6Trabajos['titulo']; ?></h2>
-	                    	</div>	                        
 	                    </div>
+	                    <?php 
+	                    	if ($contador == 3) { ?>
+	                    		<div class="clearfix hidden-xs"></div>
+	                    	<?php } 
+	                    	$contador++;
+	                    ?>
+
                 	<?php }
 			}
 			break;
@@ -204,5 +223,4 @@
 			}
 			break;
 	}
-
 ?>

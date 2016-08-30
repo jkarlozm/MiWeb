@@ -102,8 +102,11 @@
             </div>
         </section>
 
-        <section class="app-seccion">
+        <section class="seisTrabajos">
             <div class="container">
+                <h2 class="text-uppercase">portafolio</h2>
+                <hr class="colored">
+                <p>Aquí encontraras algunos trabajos en los que he trabajado.</p>
                 <div class="row" id="muestraSeisTrabajos">                    
                 </div>
             </div>
@@ -152,5 +155,12 @@
             </div>
         </section>
 
-        <!--pie de pagina-->
-        <?php include_Once 'librerias/pie.php'; ?>
+        <!-- Pie de página -->
+        <?php include_Once 'include/pie.php'; ?>
+
+        <!-- Scripts JavaScript -->
+        <?php include_Once 'include/javascript.php'; ?>
+        <script src="js/vendor/countUp.js"></script>
+
+    </body>
+</html>

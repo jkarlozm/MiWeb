@@ -197,7 +197,63 @@ section.karloz p{
 	font-weight: 400;
 	font-size: 12px;
 }
-
+section.seisTrabajos{
+	padding: 100px 0;
+	text-align: center;
+}
+section.seisTrabajos h2{
+	font-size: 50px;
+	font-weight: 900;
+}
+.colored{
+	border-top: 1px solid red;
+	border-bottom: 1px solid red;
+	height: 5px;
+	max-width: 200px;
+	margin: 25px auto;
+}
+section.seisTrabajos p{
+	font-size: 18px;
+	line-height: 1.5;
+}
+section.seisTrabajos #muestraSeisTrabajos div{
+	margin-top: 5px;
+	margin-bottom: 5px;		
+}
+section.seisTrabajos #muestraSeisTrabajos div:hover div.caption{
+	bottom: 0;
+}
+#muestraSeisTrabajos div div.caption{
+	position: absolute;
+	width: 100%;
+	height: 75px;
+	bottom: -75px;
+	-webkit-transition: all 0.5s;
+		-o-transition: all 0.5s;
+		transition: all 0.5s;	
+}
+#muestraSeisTrabajos div div.caption div.captionText{
+	color: #fff;
+	position: relative;
+	z-index: 500;
+	padding: 15px 8px;
+}
+div.captionText span.textTitle{
+	font-weight: bolder;
+}
+div.textCategory a span{
+	color: #fff;
+	font-size: 20px;
+	margin: 0 8px;
+}
+div.caption div.captionBg{
+	background-color: rgba(0,0,0,0.8);
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
 section.section2{	
 	padding: 80px 0px;
 	background-color: #f7f8fa;	
