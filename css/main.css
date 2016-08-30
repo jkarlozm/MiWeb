@@ -1,11 +1,11 @@
 *{
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
+	box-sizing: border-box;	
 
 	font-family: 'Playfair Display', serif;	
 }
-html, body{
+html, body{	
 	height: 100%;
 	margin: 0;
 	padding: 0;
@@ -80,6 +80,7 @@ header.index div.entrada{
 	transform: translate(-50%, -60%);
 }
 div.entrada h1, div.entrada span{
+	display: block;
 	font-size: 80px;
 	line-height: 80px;
 	font-weight: bolder;
@@ -98,7 +99,8 @@ div.entrada div.contenido{
 	font-size: 20px;
 	font-weight: bolder;
 	line-height: 20px;
-	overflow: hidden;		
+	overflow: hidden;
+	padding: 0 50px;		
 }
 div.entrada div.contenido ul{
 	list-style: none;
@@ -124,6 +126,13 @@ div.entrada div.contenido ul li{
 	39%,49%,64%,73% {margin-top: -73px;}
 	52%,62% {margin-top: -99px}
 }
+@-webkit-keyframes cambiar{
+	0%,10%,100% {margin-top: 0;}
+	13%,23%,86%,95% {margin-top: -22px;}
+	26%,36%,75%,84% {margin-top: -48px;}
+	39%,49%,64%,73% {margin-top: -73px;}
+	52%,62% {margin-top: -99px}
+}
 header.index div.icon{
 	width: 100%;
 	text-align: center;
@@ -140,7 +149,8 @@ header.index div.icon a, header.index div.icon a span{
 	-moz-animation-iteration-count: infinite;
 }
 section.index{	
-	padding: 100px 0;	
+	padding: 100px 0;
+	width: 100%;	
 }
 section.index h2{
 	font-size: 52px;
@@ -166,6 +176,7 @@ section.index div.aboutContent p{
 }
 section.karloz{
 	padding: 90px 0;
+	width: 100%;
 	background: url("../img/fondos/puebla.jpg") no-repeat center center fixed;
 	background-size: cover;
 	position: relative;
@@ -199,6 +210,7 @@ section.karloz p{
 }
 section.seisTrabajos{
 	padding: 100px 0;
+	width: 100%;
 	text-align: center;
 }
 section.seisTrabajos h2{
@@ -219,6 +231,10 @@ section.seisTrabajos p{
 section.seisTrabajos #muestraSeisTrabajos div{
 	margin-top: 5px;
 	margin-bottom: 5px;		
+}
+section.seisTrabajos #muestraSeisTrabajos div.col-xs-12 div.ocultar{
+	overflow: hidden; 
+	position: relative;
 }
 section.seisTrabajos #muestraSeisTrabajos div:hover div.caption{
 	bottom: 0;
@@ -254,7 +270,40 @@ div.caption div.captionBg{
 	top: 0;
 	left: 0;
 }
-section.section2{	
+section.datosCuriosos{
+	width: 100%;
+	padding: 90px 0;
+	background: url('../img/fondos/datosCuriosos.jpg') no-repeat center center fixed;
+	background-size: cover;
+	position: relative;
+	color: #fff;
+}
+section.datosCuriosos:before{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	width: 100%
+	height: 100%;
+	background-color: rgba(34,34,34,0.5);
+}
+section.datosCuriosos div.container div.row:nth-child(2){
+	margin-top: 30px;
+}
+section.datosCuriosos div.container div.row:nth-child(2) div{
+	padding: 30px 0;
+}
+section.datosCuriosos div.container div.row:nth-child(2) i{
+	font-size: 75px;
+}
+section.datosCuriosos div.container div.row:nth-child(2) h3{
+	font-size: 60px;
+	font-weight: bold;
+}
+section.section2{
+	width: 100%;
 	padding: 80px 0px;
 	background-color: #f7f8fa;	
 }

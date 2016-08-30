@@ -17,8 +17,8 @@
 					$contador = 1;
                 	while($fila6Trabajos = mysqli_fetch_assoc($rSQL6trabajos)) { ?>
 	                    <div class="col-xs-12 col-sm-4">
-	                    	<div style="overflow: hidden; position:relative;">
-		                    	<img style="position: relative;" class="img-responsive" src="img/trabajos/<?php echo $fila6Trabajos['imagen']; ?>">
+	                    	<div class="ocultar">
+		                    	<img class="img-responsive" src="img/trabajos/<?php echo $fila6Trabajos['imagen']; ?>">
 		                    	<div class="caption">
 		                    		<div class="captionText">
 		                    			<span class="textTitle"><?php echo $fila6Trabajos['titulo'];?></span>

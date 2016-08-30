@@ -38,8 +38,8 @@
                 <span class="glyphicon glyphicon-globe animated bounceInRight"></span>
                 <h1 class="animated bounceInLeft">Karloz Web</h1>
                 <hr>
-                <div class="contenido">
-                    <p>ICT Engineer | </p>
+                <div class="contenido center-block">
+                    <p class="hidden-xs">ICT Engineer | </p>
                     <ul>
                         <li>Web Developer</li>
                         <li>PHP</li>
@@ -47,7 +47,7 @@
                         <li>CSS3</li>
                         <li>JS</li>
                     </ul>                
-                    <p> | Geek | Fan of Open Source. </p>
+                    <p class="hidden-xs"> | Geek | Fan of Open Source. </p>
                 </div>
             </div>
 
@@ -62,7 +62,10 @@
         <section class="index" id="index2">
             <div class="container">
                 <div class="row text-center">
-                    <h2 class="text-capitalize">i love what i do </h2>
+                    <div class="col-xs-12">
+                        <h2 class="text-capitalize">i love what i do </h2>
+                        <hr class="colored">
+                    </div>
                 </div>
                 <div class="row">
                     <div class="col-xs-12 col-sm-4">
@@ -104,10 +107,47 @@
 
         <section class="seisTrabajos">
             <div class="container">
-                <h2 class="text-uppercase">portafolio</h2>
-                <hr class="colored">
-                <p>Aquí encontraras algunos trabajos en los que he trabajado.</p>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h2 class="text-uppercase">portafolio</h2>
+                        <hr class="colored">
+                        <p>Aquí encontraras algunos trabajos en los que he trabajado.</p>  
+                    </div>
+                </div>                
                 <div class="row" id="muestraSeisTrabajos">                    
+                </div>
+            </div>
+        </section>
+
+        <section class="datosCuriosos">
+            <div class="container text-center">
+                <div class="row">
+                    <div class="col-xs-12 text-uppercase">
+                        <h1>datos curiosos</h1>
+                        <hr class="colored">
+                    </div>
+                </div>
+                <div class="row text-uppercase">
+                    <div class="col-xs-12 col-sm-3">
+                        <i class="fa fa-code"></i>
+                        <h3 id="contadorCodigo">0</h3>
+                        <span>lineas de código</span>
+                    </div>
+                    <div class="col-xs-12 col-sm-3">
+                        <i class="fa fa-headphones"></i>
+                        <h3 id="contadorSong">0</h3>
+                        <span>songs listen</span>
+                    </div>
+                    <div class="col-xs-12 col-sm-3">
+                        <i class="fa fa-coffee"></i>
+                        <h3 id="contadorCafe">0</h3>
+                        <span>tazas de café</span>
+                    </div>
+                    <div class="col-xs-12 col-sm-3">
+                        <i class="fa fa-clock-o"></i>
+                        <h3 id="contadorHoras">0</h3>
+                        <span>horas trabajadas</span>
+                    </div>
                 </div>
             </div>
         </section>
@@ -161,6 +201,16 @@
         <!-- Scripts JavaScript -->
         <?php include_Once 'include/javascript.php'; ?>
         <script src="js/vendor/countUp.js"></script>
+        <script>            
+            var cCodigo = new CountUp("contadorCodigo", 0, 23567893);
+            var cHoras = new CountUp("contadorHoras", 0, 126789);
+            var cCafe = new CountUp("contadorCafe", 0, 1000);
+            var cSongs = new CountUp("contadorSong", 0, 4000);
+            cCodigo.start();
+            cHoras.start();
+            cCafe.start();
+            cSongs.start();
+        </script>
 
     </body>
 </html>
