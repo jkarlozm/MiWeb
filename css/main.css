@@ -428,9 +428,8 @@ section.app-seccion div.trabajo div.panel-body figure img{
 /*****************************************
 ********** infotrabajos.php **********
 *****************************************/
-section.app-seccion div.masinfo h1{
-	text-transform: uppercase;
-	letter-spacing: 2px;
+.masinfo{
+	margin-top: 100px;
 }
 p.app-separador{
 	border-bottom: 3px solid blue;
@@ -545,22 +544,97 @@ section.app-aboutme div.animacion p{
 	16% {opacity: 1;}
 }
 section.infopersona{
-	padding: 80px 0;
+	padding: 100px 0;
 }
-section.infopersona div.col-md-8 p.text-center{
-	font-size: 25px;
-	text-transform: uppercase;
-	font-weight: bold;
+section.infopersona div.container div.row:first-child h2{
+	font-size: 52px;
+	font-weight: 900;	
+}
+section.infopersona div.container div.row:nth-child(2){
+	margin-top: 30px;
+	margin-bottom: 50px;
+}
+section.infopersona div.container div.row:nth-child(2) div.text-center>div{
+	position: relative;
+}
+section.infopersona div.img{
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(34,34,34,0.5);
+}
+section.infopersona div.caption{
+	padding: 15px;
+	color: rgba(255,255,255,0.7);
+	width: 100%;
+	margin: auto;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+section.infopersona div.caption h3{
+	margin: 0;
+	font-weight: 900;
+}
+section.infopersona div.caption p{
+	margin: 0;
+	font-size: 18px;
+	line-height: 1.5;
+}
+section.infopersona div.caption ul.social{
+	margin-top: 5px;
+}
+section.infopersona div.caption ul.social li a{
+	color: rgba(255,255,255,0.7);
+}
+section.infopersona div.row:nth-child(2) div.text-justify p{
+	font-size: 14px;
+	line-height: 1.5;
+}
+section.infopersona div.row:nth-child(3) div{
+	padding: 15px 0;
+}
+section.infopersona div.text-center figure{
+	width: 150px;
+	height: 150px;
+	margin: 15px auto;
+	box-shadow: 3px 3px 9px black;
+	border-radius: 50%;
+	overflow: hidden;
 }
 section.infopersona div.text-center figure img{
 	width: 150px;
-	max-height: 150px;
-	margin: 15px auto;
-	box-shadow: 3px 3px 9px black;
+	height: 150px;
 }
 section.habilidades{
-	padding: 80px 0;
-	background-color: #f7f8fa;
+	padding: 100px 0;
+	background-color: rgba(0,0,0,0.15);
+	background-image: url(../img/fondos/iconBgr.png);
+	background-attachment: fixed;
+}
+section.habilidades div.container div.row:first-child {
+	margin-bottom: 30px;
+}
+section.habilidades div.row:first-child h2{
+	font-size: 52px;
+	font-weight: 900;
+}
+section.habilidades div.row:nth-child(2) strong{
+	position: absolute;
+	top: 50px;
+	left: 0;
+	width: 100%;
+	line-height: 40px;
+	font-size: 24px;
+}
+section.habilidades div.row:nth-child(3){
+	margin-top: 50px;
 }
 section.habilidades p{
 	font-size: 30px;
